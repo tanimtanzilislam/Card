@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Mehjabin!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(#ffe3ec, #fad0c4);
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      padding: 40px;
+      max-width: 600px;
+      text-align: center;
+      z-index: 2;
+      animation: popIn 1s ease-out forwards;
+      transform: scale(0.5);
+      position: relative;
+    }
+
+    @keyframes popIn {
+      to {
+        transform: scale(1);
+      }
+    }
+
+    h1 {
+      font-size: 3em;
+      background: linear-gradient(90deg, #ff6ec4, #7873f5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff6ec4; }
+      to   { text-shadow: 0 0 20px #7873f5; }
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #333;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .heart {
+      color: red;
+      font-size: 2rem;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    .signature {
+      margin-top: 30px;
+      font-style: italic;
+      color: #888;
+    }
+
+    /* Balloons */
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      width: 40px;
+      height: 60px;
+      border-radius: 50%;
+      animation: float 10s infinite ease-in-out;
+      z-index: 1;
+    }
+
+    .balloon::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 2px;
+      height: 20px;
+      background: black;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+      100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* Random balloon styles */
+    .balloon:nth-child(n) {
+      background-color: hsl(calc(360 * var(--i)), 80%, 70%);
+      left: calc(var(--i) * 3%);
+      animation-delay: calc(var(--i) * 0.3s);
+    }
+
+    /* Roses */
+    .roses {
+      position: absolute;
+      width: 100%;
+      bottom: 10px;
+      text-align: center;
+      z-index: 1;
+      animation: pulse 2s infinite alternate;
+    }
+
+    .roses.top {
+      top: 10px;
+      bottom: auto;
+    }
+
+    .roses img {
+      width: 40px;
+      margin: 0 5px;
+    }
+
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Balloons: Generate with inline CSS using custom --i -->
+  <!-- 35 Balloons -->
+  <script>
+    for (let i = 1; i <= 35; i++) {
+      const balloon = document.createElement('div');
+      balloon.className = 'balloon';
+      balloon.style.setProperty('--i', i / 35);
+      document.body.appendChild(balloon);
+    }
+  </script>
+
+  <!-- Roses on top -->
+  
+
+  <!-- Music -->
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-birthday.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Card -->
+  <div class="card">
+    <h1>🎂 Happy Birthday, Mehjabin! 🎉</h1>
+    <p>
+      💛 শুভ জন্মদিন আমার হলুদ গোলাপ 💛<br><br>
+      আজকের এই বিশেষ দিনে তুমি পৃথিবীতে এসেছিলে।<br>
+      হয়তো সেই কারণেই আমি আমার চিন্তা আর মননে এমন একজনকে পেয়েছি,<br>
+      যে আমার কাছে সবচেয়ে স্পেশাল — তুমি।<br><br>
+
+      খুব দেখতে ইচ্ছে করে তোমার মুখের হালকা একটা হাসি...<br>
+      এই কার্ডটা পড়ার সময় একটু মনের ভেতরে হেসে নিও, প্লিজ। 😊<br><br>
+
+      আমি সবসময় আল্লাহর কাছে দোয়া করি —<br>
+      তোমার মুখে যেন সবসময় হাসি লেগে থাকে।<br><br>
+
+      ধরে নিচ্ছি — এটা হয়তো আমার পক্ষ থেকে জীবনের শেষ জন্মদিনের উইশ।<br>
+      আবার যদি সুযোগ হয়... তাহলে বলব, **আলহামদুলিল্লাহ**।<br><br>
+
+      শুভ জন্মদিন ❤️<br>
+      তুমি আমার দোয়ার প্রথম, ভালোবাসার শেষ।
+    </p>
+    <p class="heart">❤️</p>
+    <div class="signature">— From ন্যাকা 😄</div>
+  </div>
+
+  <!-- Roses on bottom -->
+  <
+
+</body>
+</html>

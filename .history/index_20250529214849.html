@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Mehjabin!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://i.imgur.com/9yG7E2r.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      padding: 40px;
+      max-width: 600px;
+      text-align: center;
+      z-index: 2;
+      animation: popIn 1s ease-out forwards;
+      transform: scale(0.5);
+    }
+
+    @keyframes popIn {
+      to {
+        transform: scale(1);
+      }
+    }
+
+    h1 {
+      font-size: 3em;
+      background: linear-gradient(90deg, #ff6ec4, #7873f5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff6ec4; }
+      to   { text-shadow: 0 0 20px #7873f5; }
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #333;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .heart {
+      color: red;
+      font-size: 2rem;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    .signature {
+      margin-top: 30px;
+      font-style: italic;
+      color: #888;
+    }
+
+    /* Balloons */
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      width: 40px;
+      height: 60px;
+      background-color: red;
+      border-radius: 50% 50% 50% 50%;
+      animation: float 10s infinite ease-in-out;
+      z-index: 1;
+    }
+
+    .balloon::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 2px;
+      height: 20px;
+      background: black;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+      100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+    }
+
+    .balloon:nth-child(1) {
+      left: 10%;
+      background: #ff6ec4;
+      animation-delay: 0s;
+    }
+
+    .balloon:nth-child(2) {
+      left: 30%;
+      background: #fbc2eb;
+      animation-delay: 2s;
+    }
+
+    .balloon:nth-child(3) {
+      left: 50%;
+      background: #a18cd1;
+      animation-delay: 4s;
+    }
+
+    .balloon:nth-child(4) {
+      left: 70%;
+      background: #ff9a9e;
+      animation-delay: 6s;
+    }
+
+    .balloon:nth-child(5) {
+      left: 90%;
+      background: #fad0c4;
+      animation-delay: 8s;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Balloons -->
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+
+  <!-- Music -->
+  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Card -->
+  <div class="card">
+    <h1>🎂 Happy Birthday, Mehjabin! 🎉</h1>
+    <p>
+      💛 শুভ জন্মদিন আমার হলুদ গোলাপ 💛<br><br>
+      আজকের এই বিশেষ দিনে তুমি পৃথিবীতে এসেছিলে।<br>
+      হয়তো সেই কারণেই আমি আমার চিন্তা আর মননে এমন একজনকে পেয়েছি,<br>
+      যে আমার কাছে সবচেয়ে স্পেশাল — তুমি।<br><br>
+
+      খুব দেখতে ইচ্ছে করে তোমার মুখের হালকা একটা হাসি...<br>
+      এই কার্ডটা পড়ার সময় একটু মনের ভেতরে হেসে নিও, প্লিজ। 😊<br><br>
+
+      আমি সবসময় আল্লাহর কাছে দোয়া করি —<br>
+      তোমার মুখে যেন সবসময় হাসি লেগে থাকে।<br><br>
+
+      ধরে নিচ্ছি — এটা হয়তো আমার পক্ষ থেকে জীবনের শেষ জন্মদিনের উইশ।<br>
+      আবার যদি সুযোগ হয়... তাহলে বলব, **আলহামদুলিল্লাহ**।<br><br>
+
+      শুভ জন্মদিন ❤️<br>
+      তুমি আমার দোয়ার প্রথম, ভালোবাসার শেষ।
+    </p>
+    <p class="heart">❤️</p>
+    <div class="signature">— From ন্যাকা 😄</div>
+  </div>
+
+</body>
+</html>
