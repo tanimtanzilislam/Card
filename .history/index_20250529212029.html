@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      padding: 40px;
+      max-width: 600px;
+      text-align: center;
+      animation: popIn 1s ease-out forwards;
+      transform: scale(0.5);
+    }
+
+    @keyframes popIn {
+      to {
+        transform: scale(1);
+      }
+    }
+
+    h1 {
+      font-size: 3em;
+      background: linear-gradient(90deg, #ff6ec4, #7873f5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ff6ec4;
+      }
+      to {
+        text-shadow: 0 0 20px #7873f5;
+      }
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #333;
+      margin-top: 20px;
+    }
+
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .stars span {
+      position: absolute;
+      display: block;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 3s infinite ease-in-out alternate;
+    }
+
+    @keyframes twinkle {
+      0% { opacity: 0.2; transform: scale(0.5); }
+      100% { opacity: 1; transform: scale(1.5); }
+    }
+
+    .signature {
+      margin-top: 30px;
+      font-style: italic;
+      color: #888;
+    }
+
+    .heart {
+      color: red;
+      font-size: 2rem;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stars">
+    <!-- Generating twinkling stars -->
+    <span style="top:10%; left:20%; width:6px; height:6px;"></span>
+    <span style="top:30%; left:70%; width:5px; height:5px;"></span>
+    <span style="top:80%; left:40%; width:7px; height:7px;"></span>
+    <span style="top:60%; left:85%; width:4px; height:4px;"></span>
+    <span style="top:20%; left:50%; width:6px; height:6px;"></span>
+    <span style="top:90%; left:10%; width:5px; height:5px;"></span>
+  </div>
+
+  <div class="card">
+    <h1>🎂 Happy Birthday! 🎉</h1>
+    <p>
+      💛 শুভ জন্মদিন আমার হলুদ গোলাপ 💛
+
+আজকের এই বিশেষ দিনে তুমি পৃথিবীতে এসেছিলে।
+হয়তো এই কারণেই আমি আমার চিন্তা আর মননে এমন একজনকে পেয়েছি,
+যে আমার কাছে সবচেয়ে স্পেশাল।
+
+খুব দেখতে ইচ্ছে করে তোমার মুখের হালকা একটা হাসি...
+এই কার্ডটা পড়ার সময় একটু মনের ভেতরে হেসে নিও, প্লিজ। 😊
+
+আমি সবসময় আল্লাহর কাছে প্রার্থনা করি —
+তোমার মুখে যেন সবসময় হাসি লেগে থাকে।
+
+ধরে নিচ্ছি — এটা হয়তো আমার পক্ষ থেকে জীবনের শেষ জন্মদিনের উইশ।
+আবার যদি সুযোগ হয়... তাহলে বলব, আলহামদুলিল্লাহ।
+
+শুভ জন্মদিন❤️
+তুমি আমার দোয়ার প্রথম, ভালোবাসার শেষ।
+    </p>
+    <p class="heart">❤️</p>
+    <div class="signature">— From ন্যাকা</div>
+  </div>
+
+</body>
+</html>
